@@ -1,0 +1,43 @@
+
+
+    void FixedUpdate()
+    {
+
+    	float mouseY = Input.GetAxis("Mouse Y");
+
+		// m_Rigidbody.AddForce(new Vector2(0, 1) * m_Thrust * mouseY * -1 );
+    	// Debug.Log(Mathf.Asin(cam.rotation.z));
+    	Debug.Log(Math.Sin(cam.rotation.w)  - Math.Sin(1));
+  //   	float x = cam.rotation.z * cam.rotation.w * (1/Mathf.Abs(cam.rotation.w));
+  //   	float y = cam.rotation.w * cam.rotation.z;
+  //   	if(y < 0)
+  //   		y = y * -1;
+		// m_Rigidbody.AddForce(new Vector2(x, y)  * m_Thrust);
+    	x = m_Thrust *  cam.rotation.z * cam.rotation.w * (1/Mathf.Abs(cam.rotation.w));
+    	if(Mathf.Asin(cam.rotation.w) < 0)
+    		y1 = m_Thrust *   (Mathf.Sin(cam.rotation.w) - Mathf.Sin(1)) * 10000;	
+    	// else
+    		// y1 = m_Thrust *   Mathf.Asin(cam.rotation.z) * Mathf.Asin(cam.rotation.w) * (1/Mathf.Abs(Mathf.Asin(cam.rotation.w))) ;
+    	// if(cam.rotation.w < 0.75)
+    	// 	y1 = y1 * 100;
+    	// if(y < 0 && y1 > 0 || y1 < 0 && y > 0)
+    	// 	y = 0;
+    	// else
+ 
+    		// y = y1 +  1 * Time.deltaTime;
+    	// x = x +  1 * Time.deltaTime;
+
+    	// if(Mathf.Abs(cam.rotation.w) < 0.70)
+			m_Rigidbody.AddForce(new Vector2(0, 1)  * y);					
+		m_Rigidbody.AddForce(new Vector2(1, 0)  * x);			
+		// if(Mathf.Abs(cam.rotation.w) < 0.70)
+		// {
+		// 	m_Rigidbody.AddForce(new Vector2(0, 1)  * m_Thrust *  cam.rotation.z * cam.rotation.w * (1/Mathf.Abs(cam.rotation.w) ));			
+		// }
+		// else
+		// {
+		// 	m_Rigidbody.AddForce(new Vector2(0, 1)  * m_Thrust *  cam.rotation.z * cam.rotation.w * (1/Mathf.Abs(cam.rotation.w) * -1 ));			
+		// }
+
+	}
+}
