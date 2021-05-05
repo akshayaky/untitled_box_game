@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public class playButton : MonoBehaviour
 {
 	public GameObject gb;
@@ -32,10 +33,18 @@ public class playButton : MonoBehaviour
 
     //function to reduce the volume of the background music
     public void overButton() {
+    	// Debug.Log(EventSystem.current.currentSelectedGameObject.name);
+    	// Debug.Log(eventData.clickTime);
+    	if (aSrc.panStereo == 0)
+    		aSrc.panStereo = 1f;
+    	else if(aSrc.panStereo == -1f)
+    		aSrc.panStereo = 0f;
     	aSrc.volume = 0.2f;
     }
 
     public void outofButton() {
+    	if (aSrc.panStereo == 1f)
+    		aSrc.panStereo = -1f;
     	aSrc.volume = 1f;
     }
 }

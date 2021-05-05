@@ -24,6 +24,7 @@ public class backgroundMusic : MonoBehaviour
     	if( !audioS1.isPlaying && !audioS2.isPlaying && !audioS2.isPlaying )
     	{
     		currentAudioS = Random.Range(0,3);
+
 	        if(currentAudioS == 0) {
 	        	currentAudioSrc = audioS1;
 	        	audioS1.Play();

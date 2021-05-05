@@ -17,7 +17,7 @@ public class hitAudio : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D col) {
     	if(col.gameObject.tag == "block") {//gravity increase
-    		audioSrc.volume = 0.2f;
+    		audioSrc.volume = 0.1f;
 			// audioSrc.Pause();
 		}	
     }
