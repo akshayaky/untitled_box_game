@@ -15,15 +15,15 @@ public class collitionDetect : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col) {
 		if(col.gameObject.tag == "pickup01") {//gravity increase
 			gb = col.gameObject;
-			rb.gravityScale *= 4;
+			rb.gravityScale *= 7;
 			Destroy(gb);
 		}
 		else if(col.gameObject.tag == "pickup02") {//gravity decrease
 			gb = col.gameObject;
-			rb.gravityScale /= 4;
+			rb.gravityScale /= 7;
 			Destroy(gb);
 		}
-		else if(col.gameObject.tag == "pickup11") {//bounciness increase
+		else if(col.gameObject.tag == "pickup11") {//bounciness increase changed to duplicate box
 			gb = col.gameObject;
 			// pm2d.bounciness = 1f;
 			// rb.GetComponent<Collider2D>().sharedMaterial.bounciness = 1f;

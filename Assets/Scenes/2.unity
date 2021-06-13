@@ -301,12 +301,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4226069756773001254}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &613910295 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 7903009497287137306, guid: 067512cb7f089c84e8da165870415025,
-    type: 3}
-  m_PrefabInstance: {fileID: 7903009498661030554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &654994988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,7 +501,6 @@ GameObject:
   - component: {fileID: 1784924670}
   - component: {fileID: 1784924669}
   - component: {fileID: 1784924666}
-  - component: {fileID: 1784924672}
   m_Layer: 0
   m_Name: plain_sheet
   m_TagString: Untagged
@@ -581,7 +574,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3e031c74d1122046a11afe9e2017308, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9607843, g: 0.44705883, b: 0.007843138, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -687,22 +680,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 23.094425, y: 3.0076323}
   m_EdgeRadius: 0
---- !u!114 &1784924672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784924665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e2744aed0cd5a43a11ff8e1bf4ebad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 100
-  platform: {fileID: 1784924668}
-  m_Rigidbody: {fileID: 613910295}
-  m_Thrust: 10000
 --- !u!4 &2090415287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4480532680314066944, guid: 03a72cc326fe88d48b50fc05c597fc4d,
@@ -800,6 +777,21 @@ PrefabInstance:
       propertyPath: platform
       value: 
       objectReference: {fileID: 1784924668}
+    - target: {fileID: 4226069756472217689, guid: 886695e08f9f95844b760509383dbf8a,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.19215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226069756472217689, guid: 886695e08f9f95844b760509383dbf8a,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.21960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226069756472217689, guid: 886695e08f9f95844b760509383dbf8a,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4226069756472217690, guid: 886695e08f9f95844b760509383dbf8a,
         type: 3}
       propertyPath: m_Name
