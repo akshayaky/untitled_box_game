@@ -28,6 +28,7 @@ public class playButton : MonoBehaviour
     }
 
     public void PlayAgain() {
+        PlayerPrefs.SetInt("level", 1);
         SceneManager.LoadScene(1);//loading the first level
     }
 
