@@ -7,7 +7,6 @@ public class dontDestroy : MonoBehaviour
 {
 	/*
 		Awake keeps the gameObjects with tag "music" alive thorughout the scenes.
-	    This is to keep the music playing without restarting.
     */
     void Awake() {
         GameObject[] objs = GameObject.FindGameObjectsWithTag("music");

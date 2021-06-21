@@ -14,10 +14,6 @@ public class blockMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        // float mouseY = Input.GetAxis("Mouse Y");
-
-        // m_Rigidbody.AddForce(new Vector2(0, 1) * m_Thrust * mouseY * -1 );
         x = m_Thrust *  cam.rotation.z * cam.rotation.w * (1/Mathf.Abs(cam.rotation.w));
         
         if(Mathf.Asin(cam.rotation.w) < 0)

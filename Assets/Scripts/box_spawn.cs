@@ -13,23 +13,19 @@ public class box_spawn : MonoBehaviour
 	private int maxCount = 8;
 	private int count = 0;
 
-    void Start() // Or Awake, but I prefer to use Start
+    void Start()
 	{
-   		Invoke("SpawnEnemy", Random.Range(1,3)); // Spawn an enemy
-   		// You could call SpawnEnemy(); direct here if you want to spawn one right away
+   		Invoke("SpawnBox", Random.Range(1,3));
 	}
 
  
-	void SpawnEnemy()
+	void SpawnBox()
 	{
-	   // Spawn enemy/enemies here...
-	   // Just do a for loop if you want to spawn a group of them
 	 	if(count == maxCount)
 	 	{
 	 		return;
 	 	}
-		Invoke("SpawnEnemy", Random.Range(1,3)); // Spawn new enemy in a random amount of time
-	 	// Debug.Log("Hello");
+		Invoke("SpawnEnemy", Random.Range(1,3)); // Spawn new box in a random amount of time
 	 	_randomPosition = new Vector3(UnityEngine.Random.Range(min.x, max.x), 
 	 									UnityEngine.Random.Range(min.y, max.y), 0f);
 		Instantiate(gb, _randomPosition , Quaternion.identity);
@@ -38,7 +34,6 @@ public class box_spawn : MonoBehaviour
 					    		gb.transform.eulerAngles.y,
 					    		gb.transform.eulerAngles.z + 100
 								);
-		// Debug.Log(gb.transform.eulerAngles);
 		count += 1;
 	}
 

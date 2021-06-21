@@ -16,10 +16,6 @@ public class playButton : MonoBehaviour
         }
     }
 
-    // void FixedUpdate(){
-    // 	aSrc = gb.GetComponent<backgroundMusic>().currentAudioSrc;
-    // }
-
     public void NextLevel() {
     	level = PlayerPrefs.GetInt("level");
     	PlayerPrefs.SetInt("level", (level + 1));
@@ -37,18 +33,10 @@ public class playButton : MonoBehaviour
 
     //function to reduce the volume of the background music
     public void overButton() {
-    	// if (aSrc.panStereo == 0)
-    	// 	aSrc.panStereo = 1f;
-    	// else if(aSrc.panStereo == -1f)
-    	// 	aSrc.panStereo = 0f;
-    	// aSrc.volume = 0.2f;
     	aSrc.spatialBlend = 0.7f;
     }
 
     public void outofButton() {
-    	// if (aSrc.panStereo == 1f)
-    	// 	aSrc.panStereo = -1f;
-    	// aSrc.volume = 1f;
     	aSrc.spatialBlend = 0f;
 
     }
