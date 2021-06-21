@@ -22,13 +22,17 @@ public class playButton : MonoBehaviour
 
     public void NextLevel() {
     	level = PlayerPrefs.GetInt("level");
-    	PlayerPrefs.SetInt("level", level + 1);
+    	PlayerPrefs.SetInt("level", (level + 1));
     	SceneManager.LoadScene(level + 1);
     }
 
     public void ReplayLevel() {
     	level = PlayerPrefs.GetInt("level");
     	SceneManager.LoadScene(level);	
+    }
+
+    public void PlayAgain() {
+        SceneManager.LoadScene(1);//loading the first level
     }
 
     //function to reduce the volume of the background music

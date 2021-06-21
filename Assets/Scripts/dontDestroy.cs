@@ -19,7 +19,7 @@ public class dontDestroy : MonoBehaviour
 
     void FixedUpdate() {
     	int index = SceneManager.GetActiveScene().buildIndex;
-    	if(index == 0 || index == SceneManager.sceneCountInBuildSettings - 1) {
+    	if(index == 0 || index >= SceneManager.sceneCountInBuildSettings - 2) {
     		Cursor.lockState = CursorLockMode.None;
         	Cursor.visible = true;	
     	}
