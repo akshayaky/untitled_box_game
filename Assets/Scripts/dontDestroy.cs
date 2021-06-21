@@ -16,7 +16,7 @@ public class dontDestroy : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    void FixedUpdate() {
+    void Update() {
     	int index = SceneManager.GetActiveScene().buildIndex;
     	if(index == 0 || index >= SceneManager.sceneCountInBuildSettings - 2) {
     		Cursor.lockState = CursorLockMode.None;
@@ -25,6 +25,10 @@ public class dontDestroy : MonoBehaviour
     	else {
     		Cursor.lockState = CursorLockMode.Locked;
         	Cursor.visible = false;
+
+            if(Input.GetKeyDown("r")) {
+                SceneManager.LoadScene(PlayerPrefs.GetInt("level"));
+            }
     	}
     }
 }
