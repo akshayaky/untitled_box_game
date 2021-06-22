@@ -1,6 +1,6 @@
 # Platform Control
 
-![Game Menu](menu.png)
+![Game Menu](menu.PNG)
 
 This game has the players control the whole platform and try to place a cube inside it at the end point.
 
@@ -15,7 +15,7 @@ This game has the players control the whole platform and try to place a cube ins
 
 ## ScreenShots
 
-![1.png](1.png)
-![2.png](2.png)
-![3.png](3.png)
-![4.png](4.png)
+![1.PNG](1.PNG)
+![2.PNG](2.PNG)
+![3.PNG](3.PNG)
+![4.PNG](4.PNG)
