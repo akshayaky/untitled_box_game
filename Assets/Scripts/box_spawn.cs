@@ -25,7 +25,7 @@ public class box_spawn : MonoBehaviour
 	 	{
 	 		return;
 	 	}
-		Invoke("SpawnEnemy", Random.Range(1,3)); // Spawn new box in a random amount of time
+		Invoke("SpawnBox", Random.Range(1,3)); // Spawn new box in a random amount of time
 	 	_randomPosition = new Vector3(UnityEngine.Random.Range(min.x, max.x), 
 	 									UnityEngine.Random.Range(min.y, max.y), 0f);
 		Instantiate(gb, _randomPosition , Quaternion.identity);
